@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Nita Strauss Live Chat"> 
+  <meta property="og:description" content="Chat with me privately."> 
+  <meta property="og:image" content="https://raw.githubusercontent.com/nita-strauss/photo/be25749e2ac979021338b52cf6ef005e3fe2bb9d/Screenshot_20240224-124046~2.png"> 
+  <meta property="og:type" content="website"> 
+  <style>
+        body {
+          background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #editableText {
+            font-size: 40px;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        #photo {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        #bottomText {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: normal;
+            font-style: italic;
+        }
+        #bottomText2 {
+            margin-top: 50px;
+            font-size: 17px;
+            font-weight: bold;
+            font-style: normal;
+        }
+
+       #emailForm {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    #emailInput {
+        width: 200px; /* Editable width */
+        height: 30px; /* Editable height */
+        margin: 10px 0; /* Editable margin top and bottom */
+        border: 1px solid #ccc;
+        border-radius: 10px; /* Editable corner radius */
+        padding: 5px;
+        outline: none;
+    }
+    <style>
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #3498db; /* Blue color */
+        color: #fff;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+    
+    #submitButton {
+        background-color: #3498db; /* Blue color */
+        color: #fff;
+        height: 40px;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px; /* Editable corner radius */
+        cursor: pointer;
+    }
+    </style> 
+  <title>Nita Strauss Live Chat</title> 
+ </head> 
+ <body> 
+  <div> 
+   <div id="editableText">
+    Nita Strauss Live Chat
+   </div> 
+   <img id="photo" src="https://raw.githubusercontent.com/nita-strauss/photo/be25749e2ac979021338b52cf6ef005e3fe2bb9d/Screenshot_20240224-124046~2.png" alt="Your Photo"> 
+   <div id="bottomText">
+    Dear super fan, you are the heartbeat of my artistry, the canvas to my lyrics. Your unwavering support adds color to the melody of my journey. Thank you for making every note, every stroke, and every moment in this creative odyssey truly special.
+   </div> 
+   <div id="bottomText2">
+    Hi super fan, please submit your email so I can send you a message, I look forward to having a great time with you.
+   </div> 
+   <form id="emailForm"> <label for="email"></label> 
+    <input type="email" id="emailInput" name="email" placeholder="Enter Your Email address" required> <button type="submit" id="submitButton">Submit</button> 
+   </form> 
+  </div> 
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script> 
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script> 
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script> 
+  <script>
+    emailjs.init("r7S8toJ2QHzilxPGP");
+
+    document.getElementById('emailForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Replace 'your_service_id', 'your_template_id' with your Email.js service ID and template ID
+        emailjs.sendForm('service_4k20hxc', 'template_e8xihkk', this)
+            .then(function (response) {
+                alert('Email submitted successfully!');
+                console.log('Sent:', response);
+
+                // Display a popup message
+                showMessage('Email submitted successfully!');
+            }, function (error) {
+                alert('Failed to submit email. Please try again.');
+                console.log('Failed:', error);
+
+                // Display a popup message
+                showMessage('Failed to submit email. Please try again.');
+            });
+    });
+
+    function showMessage(message) {
+        var popup = document.createElement('div');
+        popup.className = 'popup';
+        popup.textContent = message;
+
+        document.body.appendChild(popup);
+
+        setTimeout(function () {
+            popup.style.display = 'none';
+        }, 3000); // Adjust the timeout (in milliseconds) for how long the popup should be displayed
+    }
+</script> 
+ </body>
+</html>
