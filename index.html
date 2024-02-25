@@ -2,16 +2,20 @@
 <html lang="en"> 
  <head> 
   <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <meta property="og:title" content="Nita Strauss Live Chat"> 
   <meta property="og:description" content="Chat with me privately."> 
   <meta property="og:image" content="https://raw.githubusercontent.com/nita-strauss/photo/be25749e2ac979021338b52cf6ef005e3fe2bb9d/Screenshot_20240224-124046~2.png"> 
   <meta property="og:type" content="website"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap">
   <style>
         body {
           background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            text-align: center;
+          font-family: Arial, sans-serif;
+          text-align: center;
         }
 
         #editableText {
@@ -25,14 +29,53 @@
             max-width: 100%;
             height: auto;
             margin-top: 20px;
+            border-radius: 50px; /* Editable border-radius for rounded corners */
+        }
+        
+        #textContainer {
+            margin-top: 20px;
         }
 
-        #bottomText {
-            margin-top: 20px;
-            font-size: 18px;
+        #editableContainer {
+            background-color: #e2dfdf;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            max-width: 84%;
             font-weight: normal;
             font-style: italic;
+            margin: 20px auto;
+            padding: 20px; /* Editable background color */
+            border-radius: 30px; /* Editable corner radius */
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1); /* Editable box shadow */
+            text-align: center; /* Editable text alignment */
         }
+        #editableContainer2 {
+            background-color: #e2dfdf;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            max-width: 84%;
+            font-weight: normal;
+            font-style: italic;
+            margin: 20px auto;
+            padding: 20px; /* Editable background color */
+            border-radius: 30px; /* Editable corner radius */
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1); /* Editable box shadow */
+            text-align: center; /* Editable text alignment */
+        }
+        #editableContainer3 {
+            background-color: #e2dfdf;
+            font-family: 'Pacifico', vietnamese;
+            font-size: 30px;
+            max-width: 79%;
+            font-weight: bold;
+            font-style: normal;
+            margin: 20px auto;
+            padding: 20px; /* Editable background color */
+            border-radius: 30px; /* Editable corner radius */
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1); /* Editable box shadow */
+            text-align: center; /* Editable text alignment */
+        }
+
         #bottomText2 {
             margin-top: 50px;
             font-size: 17px;
@@ -41,63 +84,75 @@
         }
 
        #emailForm {
-        margin-top: 20px;
-        text-align: center;
-    }
+            margin-top: 20px;
+            text-align: center;
+        }
 
-    #emailInput {
-        width: 200px; /* Editable width */
-        height: 30px; /* Editable height */
-        margin: 10px 0; /* Editable margin top and bottom */
-        border: 1px solid #ccc;
-        border-radius: 10px; /* Editable corner radius */
-        padding: 5px;
-        outline: none;
-    }
-    <style>
-    .popup {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #3498db; /* Blue color */
-        color: #fff;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        z-index: 999;
-    }
+        #emailInput {
+    width: calc(80% - 22px); /* Adjust the width to fit within the container */
+    font-family: 'Open Sans', sans-serif;
+    height: 40px;
+    margin: 15px 0;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 5px;
+    outline: none;
+    font-size: 18px;
+}
+
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #3498db; /* Blue color */
+            color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
     
-    #submitButton {
-        background-color: #3498db; /* Blue color */
-        color: #fff;
-        height: 40px;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 10px; /* Editable corner radius */
-        cursor: pointer;
-    }
+        #submitButton {
+    background-color: #3498db;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    height: 50px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 79%; /* Make the button width 100% of the container */
+    font-size: 20px;
+}
     </style> 
   <title>Nita Strauss Live Chat</title> 
  </head> 
  <body> 
   <div> 
-   <div id="editableText">
-    Nita Strauss Live Chat
+    <div id="textContainer">
+   <div id="editableContainer3">
+     Nita Strauss Live Chat 
    </div> 
+</div>
    <img id="photo" src="https://raw.githubusercontent.com/nita-strauss/photo/be25749e2ac979021338b52cf6ef005e3fe2bb9d/Screenshot_20240224-124046~2.png" alt="Your Photo"> 
-   <div id="bottomText">
-    Dear super fan, you are the heartbeat of my artistry, the canvas to my lyrics. Your unwavering support adds color to the melody of my journey. Thank you for making every note, every stroke, and every moment in this creative odyssey truly special.
-   </div> 
-   <div id="bottomText2">
-    Hi super fan, please submit your email so I can send you a message, I look forward to having a great time with you.
-   </div> 
-   <form id="emailForm"> <label for="email"></label> 
-    <input type="email" id="emailInput" name="email" placeholder="Enter Your Email address" required> <button type="submit" id="submitButton">Submit</button> 
-   </form> 
+   <div id="textContainer">
+       <div id="editableContainer">
+           "Dear super fan, you are the heartbeat of my artistry, the canvas to my lyrics. Your unwavering support adds color to the melody of my journey. Thank you for making every note, every stroke, and every moment in this creative odyssey truly special."
+       </div> 
+   </div>
+   <div id="textContainer">
+   <div id="editableContainer2">
+     Hi super fan, please submit your email so I can send you a message, I look forward to having a great time with you. 
+   </div>
+</div> 
+   <form id="emailForm">
+    <label for="email"></label>
+    <input type="email" id="emailInput" name="email" placeholder="Enter Your Email address" required>
+    <br> <!-- Add a line break to move the button to the next line -->
+    <button type="submit" id="submitButton">Submit</button>
+   </form>
   </div> 
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script> 
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script> 
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script> 
   <script>
     emailjs.init("r7S8toJ2QHzilxPGP");
@@ -133,6 +188,6 @@
             popup.style.display = 'none';
         }, 3000); // Adjust the timeout (in milliseconds) for how long the popup should be displayed
     }
-</script> 
+  </script> 
  </body>
 </html>
